@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+body {
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #F9FAFF;
+  background-image: url("../Images/bg-pattern.svg");
+  background-size: 1920px 50vh;
+  background-repeat: no-repeat;
+}
+
+header {
+  height: 144px;
+  background-image: url("../Images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header h1 {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 38px;
+  color: #293356;
+}
+header p {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  color: #848EAD;
+}
+
+main {
+  width: 90%;
+  max-width: 540px;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 8px;
+  margin-top: 54px;
+  padding: 40px 44px 33px 46px;
+}
+main .top {
+  width: 100%;
+}
+main .top .pageviews {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: #848EAD;
+}
+main .top .price {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: -1px;
+  color: #293356;
+}
+main .top .price span {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #848EAD;
+  margin-left: 8px;
+}
+main .progress {
+  width: 100%;
+  position: relative;
+  margin-top: 24px;
+}
+main .progress .bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  background: linear-gradient(to right, #A4F3EB 49%, #ECF0FB 50%);
+  cursor: pointer;
+}
+main .progress .circle {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(16, 216, 196);
+  border-radius: 50%;
+  background-image: url("../Images/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 15px 30px 0px rgba(0, 255, 231, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+main .billings {
+  margin-top: 40px;
+  gap: 15px;
+  padding-left: 28%;
+  /* Hide default HTML checkbox */
+  /* The slider */
+  /* Rounded sliders */
+}
+main .billings .switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 22px;
+}
+main .billings .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+main .billings .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CFD8EF;
+  transition: 0.4s;
+}
+main .billings .slider:hover {
+  background-color: #7AEADF;
+}
+main .billings .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+main .billings input:checked + .slider:before {
+  transform: translateX(22px);
+}
+main .billings .slider.round {
+  border-radius: 34px;
+}
+main .billings .slider.round:before {
+  border-radius: 50%;
+}
+main .billings .time {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #848EAD;
+}
+main .billings .discount {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #FEEDE8;
+  border-radius: 9.5px;
+  padding: 3px 6px;
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+  color: #FF8D68;
+  margin-left: -7px;
+}/*# sourceMappingURL=style.css.map */
