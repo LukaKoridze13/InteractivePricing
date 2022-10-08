@@ -11,6 +11,10 @@ circle.forEach((draggable) => {
     })
 })
 function drag(event) {
+    if(window.innerWidth <= 480){
+        width = bar[1].getBoundingClientRect().width
+        x = bar[1].getBoundingClientRect().left
+    }
     let left = event.clientX - x
     let perc = Math.round(left / width * 1000) / 10
     if (left < 0) {
