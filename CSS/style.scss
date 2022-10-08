@@ -18,7 +18,6 @@ $barGrey: #ECF0FB;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap;
 }
 
 .space-between {
@@ -29,6 +28,9 @@ $barGrey: #ECF0FB;
 }
 
 //  Styles
+* {
+    user-select: none;
+}
 
 body {
     width: 100vw;
@@ -73,43 +75,50 @@ main {
     box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
     border-radius: 8px;
     margin-top: 54px;
-    padding: 40px 44px 33px 46px;
+    padding: 40px 0px;
 
-    .top {
-        width: 100%;
+    .desktop {
+        .top {
+            width: 80%;
+            margin: 0 auto;
 
-        .pageviews {
-            font-family: 'Manrope';
-            font-weight: 800;
-            font-size: 14px;
-            line-height: 19px;
-            letter-spacing: 2px;
-            color: #848EAD;
-        }
-
-        .price {
-            font-family: 'Manrope';
-            font-weight: 800;
-            font-size: 40px;
-            line-height: 55px;
-            letter-spacing: -1px;
-            color: #293356;
-
-            span {
+            .pageviews {
                 font-family: 'Manrope';
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 22px;
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 19px;
+                letter-spacing: 2px;
                 color: #848EAD;
-                margin-left: 8px;
+            }
+
+            .price {
+                font-family: 'Manrope';
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 55px;
+                letter-spacing: -1px;
+                color: #293356;
+
+                span {
+                    font-family: 'Manrope';
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #848EAD;
+                    margin-left: 8px;
+                }
             }
         }
     }
 
+    .mobile {
+        display: none;
+    }
+
     .progress {
-        width: 100%;
+        width: 80%;
+        margin: 24px auto;
         position: relative;
-        margin-top: 24px;
 
         .bar {
             width: 100%;
@@ -137,9 +146,12 @@ main {
     }
 
     .billings {
-        margin-top: 40px;
+        width: 80%;
+        margin: 40px auto;
         gap: 15px;
-        padding-left: 28%;
+        padding-right: 10px;
+        justify-content: flex-end;
+
         .switch {
             position: relative;
             display: inline-block;
@@ -208,7 +220,7 @@ main {
             line-height: 16px;
             color: #848EAD;
         }
-        
+
         .discount {
             width: fit-content;
             background: #FEEDE8;
@@ -221,5 +233,129 @@ main {
             color: #FF8D68;
             margin-left: -7px;
         }
+
+        .discount_mobile {
+            display: none;
+            width: fit-content;
+            background: #FEEDE8;
+            border-radius: 9.5px;
+            padding: 3px 6px;
+            font-family: 'Manrope';
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 14px;
+            color: #FF8D68;
+            margin-left: -7px;
+        }
+
+    }
+
+    .bottom {
+        width: 100%;
+        margin-top: 40px;
+        border-top: 1px solid #ECF0FB;
+        padding-top: 32px;
+        padding-inline: 10%;
+
+        .left {
+            ul {
+                gap: 11px;
+                align-items: flex-start;
+
+                li {
+                    font-family: 'Manrope';
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: #848EAD;
+
+                    img {
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+
+        button {
+            background-color: #293356;
+            border-radius: 20.5px;
+            padding: 13px 46px;
+            font-family: 'Manrope';
+            font-weight: 800;
+            font-size: 12px;
+            line-height: 16px;
+            color: #BECDFF;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+@media (max-width:480px) {
+    header {
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    main {
+        .desktop {
+            display: none;
+        }
+
+        .mobile {
+            display: flex;
+            width: 100%;
+            gap: 25px;
+
+            .pageviews {
+                font-family: 'Manrope';
+                font-weight: 800;
+                font-size: 14px;
+                line-height: 19px;
+                letter-spacing: 2px;
+                color: #848EAD;
+            }
+
+            .price {
+                font-family: 'Manrope';
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 55px;
+                letter-spacing: -1px;
+                color: #293356;
+
+                span {
+                    font-family: 'Manrope';
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #848EAD;
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .discount_mobile {
+        display: block !important;
+    }
+
+    .discount {
+        display: none;
+    }
+
+    .billings {
+        justify-content: center !important;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 32px;
     }
 }

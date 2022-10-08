@@ -11,7 +11,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .space-between {
@@ -19,6 +18,13 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+}
+
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -60,12 +66,13 @@ main {
   box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
   border-radius: 8px;
   margin-top: 54px;
-  padding: 40px 44px 33px 46px;
+  padding: 40px 0px;
 }
-main .top {
-  width: 100%;
+main .desktop .top {
+  width: 80%;
+  margin: 0 auto;
 }
-main .top .pageviews {
+main .desktop .top .pageviews {
   font-family: "Manrope";
   font-weight: 800;
   font-size: 14px;
@@ -73,7 +80,7 @@ main .top .pageviews {
   letter-spacing: 2px;
   color: #848EAD;
 }
-main .top .price {
+main .desktop .top .price {
   font-family: "Manrope";
   font-weight: 800;
   font-size: 40px;
@@ -81,7 +88,7 @@ main .top .price {
   letter-spacing: -1px;
   color: #293356;
 }
-main .top .price span {
+main .desktop .top .price span {
   font-family: "Manrope";
   font-weight: 600;
   font-size: 16px;
@@ -89,10 +96,13 @@ main .top .price span {
   color: #848EAD;
   margin-left: 8px;
 }
+main .mobile {
+  display: none;
+}
 main .progress {
-  width: 100%;
+  width: 80%;
+  margin: 24px auto;
   position: relative;
-  margin-top: 24px;
 }
 main .progress .bar {
   width: 100%;
@@ -117,9 +127,11 @@ main .progress .circle {
   cursor: pointer;
 }
 main .billings {
-  margin-top: 40px;
+  width: 80%;
+  margin: 40px auto;
   gap: 15px;
-  padding-left: 28%;
+  padding-right: 10px;
+  justify-content: flex-end;
   /* Hide default HTML checkbox */
   /* The slider */
   /* Rounded sliders */
@@ -187,4 +199,106 @@ main .billings .discount {
   line-height: 14px;
   color: #FF8D68;
   margin-left: -7px;
+}
+main .billings .discount_mobile {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background: #FEEDE8;
+  border-radius: 9.5px;
+  padding: 3px 6px;
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 14px;
+  color: #FF8D68;
+  margin-left: -7px;
+}
+main .bottom {
+  width: 100%;
+  margin-top: 40px;
+  border-top: 1px solid #ECF0FB;
+  padding-top: 32px;
+  padding-inline: 10%;
+}
+main .bottom .left ul {
+  gap: 11px;
+  align-items: flex-start;
+}
+main .bottom .left ul li {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #848EAD;
+}
+main .bottom .left ul li img {
+  margin-right: 16px;
+}
+main .bottom button {
+  background-color: #293356;
+  border-radius: 20.5px;
+  padding: 13px 46px;
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BECDFF;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 20px;
+  }
+  header p {
+    font-size: 13px;
+  }
+  main .desktop {
+    display: none;
+  }
+  main .mobile {
+    display: flex;
+    width: 100%;
+    gap: 25px;
+  }
+  main .mobile .pageviews {
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 2px;
+    color: #848EAD;
+  }
+  main .mobile .price {
+    font-family: "Manrope";
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: -1px;
+    color: #293356;
+  }
+  main .mobile .price span {
+    font-family: "Manrope";
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #848EAD;
+    margin-left: 8px;
+  }
+  .discount_mobile {
+    display: block !important;
+  }
+  .discount {
+    display: none;
+  }
+  .billings {
+    justify-content: center !important;
+  }
+  .bottom {
+    flex-direction: column;
+    gap: 32px;
+  }
 }/*# sourceMappingURL=style.css.map */
