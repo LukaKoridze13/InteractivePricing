@@ -157,9 +157,7 @@ main .billings .slider {
   background-color: #CFD8EF;
   transition: 0.4s;
 }
-main .billings .slider:hover {
-  background-color: #7AEADF;
-}
+
 main .billings .slider:before {
   position: absolute;
   content: "";
@@ -178,6 +176,9 @@ main .billings .slider.round {
 }
 main .billings .slider.round:before {
   border-radius: 50%;
+}
+main input:checked+.slider {
+  background-color: #7AEADF;;
 }
 main .billings .time {
   font-family: "Manrope";
